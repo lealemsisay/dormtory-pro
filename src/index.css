@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-bg: #09090b;
+  --color-brand-panel: #111114;
+  --color-brand-primary: #10b981;
+  --color-brand-border: #27272a;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-brand-bg text-zinc-100;
+  }
+}
+
+.glass-card {
+  @apply bg-[#111114]/80 border border-zinc-800 backdrop-blur-xl shadow-xl;
+}
+
+.auth-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
